@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-    print(str[:n - 1] + str[n + 1:])
+    print(str[0:n - 1] + str[n + 1:])
