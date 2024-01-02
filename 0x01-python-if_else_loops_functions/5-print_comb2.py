@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-for n in range(99):
-    d1 = n / 10
-    d2 = n % 10
-    print("{:d}{:d}".format(d1, d2), end=", ")
-
-print("99")
+for n in range(100):
+    if n < 99:
+        print("{:02d}".format(n), end=", ")
+    else
+        print("99")
