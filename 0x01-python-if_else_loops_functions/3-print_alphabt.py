@@ -2,5 +2,4 @@
 for c in range(ord('a'), ord('z') + 1):
     if (c == ord('q') or c == ord('e')):
         pass
-    else
-        print("{:c}".format(c), end="")
+    print("{:c}".format(c), end="")
