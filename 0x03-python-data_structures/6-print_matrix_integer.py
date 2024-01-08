@@ -9,5 +9,5 @@ def print_matrix_integer(matrix=[[]]):
             print()
         for n in range(len(the_list)):
             print("{:d}".format(the_list[n]), 
-                    end = "\n" if n is len(the_list) - 1 else " ")
+                  end = "\n" if n is len(the_list) - 1 else " ")
 
