@@ -6,7 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     else:
         n1 = tuple_a[0]
 
-    if len(tuple_a) == 0:
+    if len(tuple_a) < 2:
         n2 = 0
     else:
         n2 = tuple_a[1]
@@ -16,7 +16,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     else:
         n3 = tuple_b[0]
 
-    if len(tuple_b) == 0:
+    if len(tuple_b) < 2:
         n4 = 0
     else:
         n4 = tuple_b[1]
