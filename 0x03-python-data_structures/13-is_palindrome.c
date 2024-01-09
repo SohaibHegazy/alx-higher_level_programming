@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 int pal(listint_t **head, listint_t *end)
 {
 	if (end == NULL)
-		return (NULL);
+		return (1);
 	if (pal(head, end->next) && *head->n == end->n)
 	{
 		*head = (*head)->next;
