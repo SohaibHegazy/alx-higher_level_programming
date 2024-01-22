@@ -6,7 +6,7 @@ def safe_print_list_integers(my_list=[], x=0):
 
     while i is not x:
         try:
-            print("{:d}".format(my_list[i]))
+            print("{:d}".format(my_list[i]), end="")
             i = i + 1
             p = p + 1
         except (ValueError, TypeError):
