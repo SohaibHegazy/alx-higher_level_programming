@@ -5,8 +5,8 @@ def safe_print_integer_err(value):
 
     try:
         print("{:d}".format(value))
-    except Exception as err:
-        print("Exception:", err, file=sys.stderr)
+    except Exception as er:
+        print("Exception:", er, file=sys.stderr)
         bool = False
 
     return bool
