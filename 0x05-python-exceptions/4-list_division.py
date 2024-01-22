@@ -14,11 +14,9 @@ def list_division(my_list_1, my_list_2, list_length):
         except (ValueError, TypeError):
             print("wrong type")
             res = 0
-            continue
         except IndexError:
             print("out of range")
             res = 0
-            continue
         finally:
             new_list.append(res)
             i = i + 1
