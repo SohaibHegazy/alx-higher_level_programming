@@ -48,15 +48,20 @@ class Square:
     def my_print(self):
         """ draw square """
         if self.__size == 0:
+            """ print """
             print("")
             return
 
     for i in range(0, self.__position[1]):
+        """ check """
         print("")
 
     for i in range(0, self.__size):
+        """ check """
         for j in range(0, self.__position[0]):
+            """ check """
             print(" ", end="")
         for k in range(0, self.__size):
+            """ check """
             print("#", end="")
         print("")
