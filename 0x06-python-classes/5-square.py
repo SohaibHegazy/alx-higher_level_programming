@@ -29,6 +29,7 @@ class Square:
         return self.__size * self.__size
     """ draw square """
     def my_print(self):
+        """ draw square """
         for i in range(self.size):
             for j in range(self.size):
                 if i is self.size - 1 and i != j:
