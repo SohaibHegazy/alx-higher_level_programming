@@ -32,8 +32,8 @@ class Square:
         """ draw square """
         for i in range(self.size):
             for j in range(self.size):
-                if i is self.size - 1 and i != j:
-                    print("#")
+                if j is self.size - 1 and i != j:
+                    print('#')
                 else:
                     print("#", end="")
         print()
