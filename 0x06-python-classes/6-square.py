@@ -28,8 +28,8 @@ class Square:
         self.__size = value
 
     @property
-    """ position getter for current square position """
     def position(self):
+        """ position getter for current square position """
         return self.__position
 
     @position.setter
