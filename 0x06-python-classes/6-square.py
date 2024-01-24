@@ -3,17 +3,21 @@
 
 
 class Square:
-    """ init """
+    """ init  to draw a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """ init attr """
+        """ init attrs to draw a square
+        Args:
+            size (int): size of square side
+            position (int, int): the position of new square
+        """
 
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """ getter for size """
+        """ getter for current size of the square """
         return self.__size
 
     @size.setter
@@ -26,7 +30,7 @@ class Square:
         self.__size = value
 
     @property
-    """ position getter """
+    """ position getter for current square position """
     def position(self):
         """ check """
         return self.__position
@@ -38,23 +42,15 @@ class Square:
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value):
-            """ check
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(num, int) for num in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(num >= 0 for num in value):
-             """
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """ check """
+        """ calculate the area of the square """
         return self.__size * self.__size
 
     def my_print(self):
-        """ draw square """
+        """ draw square using the character of # """
         if self.__size == 0:
 
     for i in range(0, self.__position[1]):
