@@ -32,7 +32,6 @@ class Square:
     @property
     """ position getter for current square position """
     def position(self):
-        """ check """
         return self.__position
 
     @position.setter
