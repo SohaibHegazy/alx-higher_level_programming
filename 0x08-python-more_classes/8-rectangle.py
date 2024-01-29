@@ -86,7 +86,7 @@ class Rectangle:
         rect_1: first rectangle to be compared
         rect_2: second rectangle to be compared
 
-        Raise: 
+        Raise:
         TypeError("rect_1 must be an instance of Rectangle")
         when rect_1 is not instance of Rectangle
         OR
