@@ -76,7 +76,3 @@ class Rectangle:
         """ represent a rectangle """
         return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
-    def __del__(self):
-        """ prints a message when deleting a rectangle instance """
-        print("Bye rectangle...")
-        Rectangle.n -= 1
