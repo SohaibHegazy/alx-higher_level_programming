@@ -60,3 +60,4 @@ class Rectangle:
             rec = ""
         else:
             rec = rec + "\n".join("#" * self.__width for i in range(self.__height))
+        return rec
