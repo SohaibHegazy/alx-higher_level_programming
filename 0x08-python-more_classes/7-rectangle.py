@@ -65,11 +65,10 @@ class Rectangle:
         """ draw the rectangle using # """
         rec = ""
         if self.__width == 0 or self.__height == 0:
-            rec = ""
+            return ""
         else:
-            rec += ((str(self.print_symbol) * self.__width + "\n") *
+            return ((str(self.print_symbol) * self.__width + "\n") *
                     self.__height)
-        return rec
 
     def __repr__(self):
         """ represent a rectangle """
