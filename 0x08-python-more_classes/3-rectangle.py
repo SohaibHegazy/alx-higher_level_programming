@@ -56,6 +56,7 @@ class Rectangle:
 
     def __str__(self):
         """ draw the rectangle using # """
+        rec = ""
         if self.__width == 0 or self.__height == 0:
             rec = ""
         else:
