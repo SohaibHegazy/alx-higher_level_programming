@@ -68,7 +68,7 @@ class Rectangle:
             return ""
         else:
             return ((str(self.print_symbol) * self.__width + "\n") *
-                    self.__height)
+                    self.__height)[:-1]
 
     def __repr__(self):
         """ represent a rectangle """
