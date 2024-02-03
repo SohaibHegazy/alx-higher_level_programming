@@ -44,6 +44,7 @@ def matrix_divided(matrix, div):
 
     return [[round(n/div, 2) for n in l] for l in matrix]
 
+
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/2-matrix_divided.txt")
