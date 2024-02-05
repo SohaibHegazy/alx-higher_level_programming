@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" module to inheret list """
+
 
 class MyList(list):
     """ class that inherets from list"""
