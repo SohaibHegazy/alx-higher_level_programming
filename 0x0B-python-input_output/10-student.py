@@ -3,7 +3,7 @@
 
 
 class Student:
-    """ 
+    """
     class with public instance attr.
     first_name, last_name, age
     """
