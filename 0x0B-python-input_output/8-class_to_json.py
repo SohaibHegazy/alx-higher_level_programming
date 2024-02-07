@@ -2,9 +2,6 @@
 """ Module to serialize instaces of a class"""
 
 
-import jason
-
-
 def class_to_json(obj):
     """
     function that returns the dictionary description with
