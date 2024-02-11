@@ -43,7 +43,7 @@ class Rectangle(Base):
         """ getter of x of Rectangle"""
         return self.__x
 
-    @setter.x
+    @x.setter
     def x(self, value):
         """ setter of x of Rectangle"""
         self.validate_attr("x", value)
@@ -54,7 +54,8 @@ class Rectangle(Base):
         """ getter of y of Rectangle"""
         return self.__y
 
-    def u(self, value):
+    @y.setter
+    def y(self, value):
         """ setter of y of Rectangle"""
         self.validate_attr("y", value)
         self.__y = value
