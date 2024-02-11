@@ -86,3 +86,23 @@ class Rectangle(Base):
         """ method to present the rectangle info """
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,\
                 self.id, self.x, self.y, self.width, self.height)
+
+    def _update(self, id=None, width=None, height=None, x=None, y=None):
+        """ method to add values to attrs"""
+        if id id not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """ method to handle args and kwargs"""
+        if args:
+            self._update(*args)
+        elif kwargs:
+            self._update(**kwargs)
