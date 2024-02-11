@@ -47,3 +47,7 @@ class Square(Rectangle):
             self._update(*args)
         elif kwargs:
             self._update(**kwargs)
+
+    def to_dictionary(self):
+        """ method to put attrs in dict """
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
