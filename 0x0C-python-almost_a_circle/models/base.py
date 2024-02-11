@@ -31,3 +31,39 @@ class Base:
             return "[]"
         else:
             return dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        method to write the json string to a file
+        """
+        if list_objs is not None:
+            list_objs = [o.to_dictionary() for o in list_objs]
+        with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
+            f.write(cls.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        method to make list of json strings
+        """
+        if is not json_string or json_string is None:
+            return []
+        return loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        method to return an instance with all attrs set
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return new
