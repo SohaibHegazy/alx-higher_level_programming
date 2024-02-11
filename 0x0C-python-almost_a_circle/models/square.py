@@ -29,3 +29,21 @@ class Square(Rectangle):
         """ setter for sqaure """
         self.width = value
         self.height = value
+
+    def _update(self, id=None, size=None, x=None, y=None):
+        """ method to add values to attrs"""
+        if id id not None:
+            self.id = id
+        if size is not None:
+            self.size = size
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """ method to handle args and kwargs"""
+        if args:
+            self._update(*args)
+        elif kwargs:
+            self._update(**kwargs)
