@@ -55,4 +55,13 @@ class Rectangle(Base):
         """ setter of y of Rectangle"""
         self.__y = value
 
-
+    def validate_attr(self, name, value, eq=True):
+        """
+        Method to validate attributes
+        """
+        if typr(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if eq and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+        if not eq and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
