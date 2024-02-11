@@ -107,3 +107,8 @@ class Rectangle(Base):
             self._update(*args)
         elif kwargs:
             self._update(**kwargs)
+
+    def to_dictionary(self):
+        """ method to put attrs i dict"""
+        return {"id": self.id, "width": self.__width, "height": self.__height\
+                , "x": self.__x, "y": self.__y}
