@@ -16,5 +16,16 @@ class Square(Rectangle):
         """
         represents the square info
         """
-        return "[{}] ({}) {}/{} - {}".format(type(self), self.id,\
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id,\
                 self.x, self.y, self.width)
+
+    @property
+    def size(self):
+        """ getter for square """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """ setter for sqaure """
+        self.width = value
+        self.height = value
