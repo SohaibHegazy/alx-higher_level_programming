@@ -32,7 +32,7 @@ class Square(Rectangle):
 
     def _update(self, id=None, size=None, x=None, y=None):
         """ method to add values to attrs"""
-        if id id not None:
+        if id is not None:
             self.id = id
         if size is not None:
             self.size = size
