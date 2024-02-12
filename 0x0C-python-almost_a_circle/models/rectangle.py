@@ -76,6 +76,7 @@ class Rectangle(Base):
         method to calculate Rectangle area
         """
         return self.width * self.height
+
     def display(self):
         """
         method to display rectangle using # symbol
@@ -85,8 +86,9 @@ class Rectangle(Base):
 
     def __str__(self):
         """ method to present the rectangle info """
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,\
-                self.id, self.x, self.y, self.width, self.height)
+        return "[{}] ({}) {}/{} - {}/{}".\
+            format(type(self).__name__, self.id, self.x, self.y, self.width,
+                   self.height)
 
     def _update(self, id=None, width=None, height=None, x=None, y=None):
         """ method to add values to attrs"""
@@ -110,5 +112,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ method to put attrs i dict"""
-        return {"id": self.id, "width": self.__width, "height": self.__height\
-                , "x": self.__x, "y": self.__y}
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
