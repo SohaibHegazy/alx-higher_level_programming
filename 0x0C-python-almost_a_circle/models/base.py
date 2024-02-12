@@ -18,7 +18,7 @@ class Base:
         Raise: none
         """
         if id is not None:
-            seld.id = id
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
