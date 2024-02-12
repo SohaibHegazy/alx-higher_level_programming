@@ -63,7 +63,7 @@ class Base:
         """
         method to make list of json strings
         """
-        if is not json_string or json_string is None:
+        if not json_string or json_string is None:
             return []
         return loads(json_string)
 
