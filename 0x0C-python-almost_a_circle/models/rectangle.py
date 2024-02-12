@@ -81,7 +81,7 @@ class Rectangle(Base):
         """
         method to display rectangle using # symbol
         """
-        print('\n' * self.y)
+        print('\n' * self.y, end="")
         print((' ' * self.x + "#" * self.width + '\n') * self.height, end="")
 
     def __str__(self):
