@@ -33,6 +33,21 @@ class Base:
         else:
             return dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """method to return an instance with all attrs set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return new
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -51,23 +66,6 @@ class Base:
         if is not json_string or json_string is None:
             return []
         return loads(json_string)
-
-    @classmethod
-    def create(cls, **dictionary):
-        """
-        method to return an instance with all attrs set
-        """
-        from models.rectangle import Rectangle
-        from models.square import Square
-
-        if cls is Rectangle:
-            new = Rectangle(1, 1)
-        elif cls is Square:
-            new = Square(1)
-        else:
-            new = None
-        new.update(**dictionary)
-        return new
 
     @classmethod
     def load_from_file(cls):
