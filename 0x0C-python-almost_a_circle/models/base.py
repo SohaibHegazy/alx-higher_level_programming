@@ -35,6 +35,13 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ method to deserialize"""
+        if json_string is None or not json_string:
+            return []
+        return loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
         """method to return an instance with all attrs set"""
         from models.rectangle import Rectangle
         from models.square import Square
