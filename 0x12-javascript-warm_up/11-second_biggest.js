@@ -6,5 +6,6 @@ if (!process.argv[3]) {
 } else {
   const argList = process.argv.sort();
   const reverseList = argList.reverse();
-  console.log(reverseList[1]);
+  console.log(parseInt(reverseList[1]));
+}
 }
