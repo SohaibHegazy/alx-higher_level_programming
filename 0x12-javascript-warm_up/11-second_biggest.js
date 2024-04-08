@@ -5,5 +5,6 @@ if (!process.argv[3]) {
   console.log(0);
 } else {
   const argList = process.argv.sort();
-  console.log(argList.reverse()[1]);
+  const reverseList = argList.reverse();
+  console.log(reverseList[1]);
 }
