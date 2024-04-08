@@ -8,4 +8,3 @@ if (!process.argv[3]) {
   const reverseList = argList.reverse();
   console.log(parseInt(reverseList[1]));
 }
-}
