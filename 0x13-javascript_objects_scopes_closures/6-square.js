@@ -6,8 +6,16 @@ module.exports = class Square extends Parent {
     if (c === undefined) {
       this.print();
     } else {
-      for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
+      for (let i = 0; i < parseInt(this.height); i++) {
+        let line = null;
+        for (let j = 0; j < parseInt(this.width); j++) {
+          if (line === null) {
+            line = 'c';
+          } else {
+            line += 'c';
+          }
+        }
+        console.log(line);
       }
     }
   }
