@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const Parent = require('./5-square');
+const Father = require('./5-square');
 
-module.exports = class Square extends Parent {
+module.exports = class Square extends Father {
   charPrint (c) {
     if (c === undefined) {
       this.print();
