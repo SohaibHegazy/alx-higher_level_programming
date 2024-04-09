@@ -10,9 +10,9 @@ module.exports = class Square extends Father {
         let line = null;
         for (let j = 0; j < this.width; j++) {
           if (line === null) {
-            line = 'c';
+            line = c;
           } else {
-            line += 'c';
+            line += c;
           }
         }
         console.log(line);
