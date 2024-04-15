@@ -12,7 +12,7 @@ if __name__ == "__main__":
                            db=sys.argv[3])
 
     myCursor = myDb.cursor()
-    myCursor.execute("SELECT * FROM states WHERE name='{}'\
+    myCursor.execute("SELECT * FROM states WHERE binary name='{}'\
                      ORDER BY id".format(sys.argv[4]))
 
     states = myCursor.fetchall()
