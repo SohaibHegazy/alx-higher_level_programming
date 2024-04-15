@@ -6,15 +6,16 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-  myDb = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    myDb = MySQLdb.connect(host="localhost", port=3306,
+                           user=sys.argv[1], passwd=sys.argv[2],
+                           db=sys.argv[3])
 
-  myCursor = myDb.cursor()
-  myCursor.execute("SELECT * FROM states ORDER BY id")
+    myCursor = myDb.cursor()
+    myCursor.execute("SELECT * FROM states ORDER BY id")
 
-  states = myCursor.fetchall()
-  for state in states:
-    print (state)
+    states = myCursor.fetchall()
+    for state in states:
+        print(state)
 
-  myCursor.close()
-  myDb.close()
+    myCursor.close()
+    myDb.close()
