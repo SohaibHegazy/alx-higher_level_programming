@@ -12,8 +12,7 @@ if __name__ == "__main__":
 
     myCursor = myDb.cursor()
     myCursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
-                     JOIN states ON cities.state_id = states.id ORDER by\
-                     cities.id")
+                     JOIN states ON cities.state_id = states.id ORDER by id")
 
     cities = myCursor.fetchall()
     for city in cities:
