@@ -14,7 +14,7 @@ if __name__ == "__main__":
     myCursor = myDb.cursor()
     myCursor.execute("SELECT cities.name FROM cities INNER JOIN states\
                      ON cities.state_id = states.id WHERE states.name=%s\
-                     ORDER by id", (sys.argv[4],))
+                     ORDER by states.id", (sys.argv[4],))
 
     cities = myCursor.fetchall()
     for city in cities:
