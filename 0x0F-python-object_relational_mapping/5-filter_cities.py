@@ -18,7 +18,8 @@ if __name__ == "__main__":
 
     cities = myCursor.fetchall()
     for city in cities:
-        print(city)
+        c = ", ".join(city[0])
+        print(c)
 
     myCursor.close()
     myDb.close()
