@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cityList = []
     cities = myCursor.fetchall()
     for city in cities:
-        cityList.append(city[1])
+        cityList.append(city[0])
     print(", ".join(cityList))
 
     myCursor.close()
