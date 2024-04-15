@@ -17,9 +17,7 @@ if __name__ == "__main__":
                      ORDER by cities.id", (sys.argv[4],))
 
     cities = myCursor.fetchall()
-    for city in cities:
-        c = ", ".join(city[0])
-        print(c)
+    print(", ".join(city[0]))
 
     myCursor.close()
     myDb.close()
