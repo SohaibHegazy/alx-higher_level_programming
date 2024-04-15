@@ -16,8 +16,11 @@ if __name__ == "__main__":
                      ON cities.state_id = states.id WHERE states.name=%s\
                      ORDER by cities.id", (sys.argv[4],))
 
+    cityList = []
     cities = myCursor.fetchall()
-    print(", ".join(city[0]))
+    for city in cities:
+        cityList.append(city[1])
+    print(", ".join(cityList))
 
     myCursor.close()
     myDb.close()
