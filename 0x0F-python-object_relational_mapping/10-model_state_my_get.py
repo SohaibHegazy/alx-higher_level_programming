@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    query = session.query(State).filter(State.name == sys.argv[4])
+    query = session.query(State).filter(State.name == sys.argv[4]).all()
 
     if query:
         for instance in query:
