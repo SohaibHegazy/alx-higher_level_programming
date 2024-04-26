@@ -9,7 +9,7 @@ def find_peak(list_of_integers):
     Function to find a peak of a list
     '''
 
-    if list_of_integers == []:
+    if not list_of_integers:
         return None
 
     list_len = len(list_of_integers)
@@ -17,7 +17,7 @@ def find_peak(list_of_integers):
     end = list_len - 1
 
     while start < end:
-        mid = int(start + (end - start) / 2)
+        mid = int(list_len / 2)
         if list_of_integers[mid] > list_of_integers[mid - 1] and\
                 list_of_integers[mid] > list_of_integers[mid + 1]:
                     return list_of_integers[mid]
